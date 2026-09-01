@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boss直聘 - 数据分析师岗位综合分析</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.3/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:false, theme:'default', securityLevel:'loose'});</script>
+</head>
+<body>
+    <header class="header">
+        <h1>Boss直聘 数据分析师岗位 综合现状分析</h1>
+        <p class="subtitle">基于500条招聘数据的多维度深度分析 | 2025年数据</p>
+    </header>
+    <div class="container">
+        <section id="overview" class="section">
+            <h2>总览数据</h2>
+            <div class="card-grid" id="summary-cards"></div>
+        </section>
+        <section id="city-section" class="section">
+            <h2>城市维度分析</h2>
+            <div class="chart-row">
+                <div class="chart-box">
+                    <h3>各城市岗位数量分布</h3>
+                    <div class="mermaid" id="chart-city-bar"></div>
+                </div>
+                <div class="chart-box">
+                    <h3>各城市平均薪资对比</h3>
+                    <div class="mermaid" id="chart-city-salary"></div>
+                </div>
+            </div>
+        </section>
+        <section id="industry-section" class="section">
+            <h2>行业维度分析</h2>
+            <div class="chart-row">
+                <div class="chart-box">
+                    <h3>各行业招聘数据分析岗数量</h3>
+                    <div class="mermaid" id="chart-industry-pie"></div>
+                </div>
+                <div class="chart-box">
+                    <h3>各行业平均薪资</h3>
+                    <div class="mermaid" id="chart-industry-salary"></div>
+                </div>
+            </div>
+        </section>
+        <section id="salary-section" class="section">
+            <h2>薪资维度分析</h2>
+            <div class="chart-row">
+                <div class="chart-box">
+                    <h3>薪资等级分布</h3>
+                    <div class="mermaid" id="chart-salary-pie"></div>
+                </div>
+                <div class="chart-box">
+                    <h3>薪资等级占比</h3>
+                    <div class="mermaid" id="chart-salary-bar"></div>
+                </div>
+            </div>
+        </section>
+        <section id="edu-section" class="section">
+            <h2>学历维度分析</h2>
+            <div class="chart-row">
+                <div class="chart-box">
+                    <h3>各学历要求岗位数量</h3>
+                    <div class="mermaid" id="chart-edu-pie"></div>
+                </div>
+                <div class="chart-box">
+                    <h3>学历与平均薪资关系</h3>
+                    <div class="mermaid" id="chart-edu-salary"></div>
+                </div>
+            </div>
+        </section>
+        <section id="exp-section" class="section">
+            <h2>经验维度分析</h2>
+            <div class="chart-row">
+                <div class="chart-box">
+                    <h3>各经验要求岗位数量</h3>
+                    <div class="mermaid" id="chart-exp-bar"></div>
+                </div>
+                <div class="chart-box">
+                    <h3>经验与平均薪资关系</h3>
+                    <div class="mermaid" id="chart-exp-salary"></div>
+                </div>
+            </div>
+        </section>
+        <section id="skill-section" class="section">
+            <h2>技能维度分析</h2>
+            <div class="chart-row">
+                <div class="chart-box">
+                    <h3>技能需求词频 TOP15</h3>
+                    <div class="mermaid" id="chart-skill-bar"></div>
+                </div>
+                <div class="chart-box">
+                    <h3>高薪岗位(25K+) 技能需求 TOP15</h3>
+                    <div class="mermaid" id="chart-skill-high-bar"></div>
+                </div>
+            </div>
+        </section>
+        <section id="company-section" class="section">
+            <h2>公司规模维度分析</h2>
+            <div class="chart-row">
+                <div class="chart-box">
+                    <h3>不同规模公司招聘数量</h3>
+                    <div class="mermaid" id="chart-company-pie"></div>
+                </div>
+                <div class="chart-box">
+                    <h3>公司规模与薪资关系</h3>
+                    <div class="mermaid" id="chart-company-salary"></div>
+                </div>
+            </div>
+        </section>
+        <section id="headhunter-section" class="section">
+            <h2>猎头岗位分析</h2>
+            <div class="chart-row">
+                <div class="chart-box">
+                    <h3>猎头 vs 非猎头岗位数量</h3>
+                    <div class="mermaid" id="chart-hh-pie"></div>
+                </div>
+                <div class="chart-box">
+                    <h3>猎头 vs 非猎头平均薪资</h3>
+                    <div class="mermaid" id="chart-hh-salary"></div>
+                </div>
+            </div>
+        </section>
+        <section id="trend-section" class="section">
+            <h2>月度发布趋势</h2>
+            <div class="chart-row">
+                <div class="chart-box full-width">
+                    <h3>各月岗位发布数量趋势</h3>
+                    <div class="mermaid" id="chart-trend-line"></div>
+                </div>
+            </div>
+        </section>
+        <section id="conclusion-section" class="section">
+            <h2>分析结论与建议</h2>
+            <div class="conclusion-box" id="conclusion-content"></div>
+        </section>
+    </div>
+    <footer class="footer">
+        <p>Boss直聘数据分析师岗位分析系统 | 数据来源: Boss直聘公开招聘数据 | 分析时间: 2025年</p>
+    </footer>
+    <script src="/js/app.js"></script>
+</body>
+</html>
