@@ -1,0 +1,152 @@
+/* Boss直聘 数据分析师岗位分析 - 样式表 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.header {
+    background: linear-gradient(135deg, #00beac 0%, #00a89d 100%);
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px 30px;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.header .subtitle {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #00beac;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+.stat-card {
+    background: #f7faf9;
+    border: 1px solid #e0e8e6;
+    border-radius: 6px;
+    padding: 20px 16px;
+    text-align: center;
+}
+
+.stat-card .value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #00beac;
+    margin-bottom: 6px;
+}
+
+.stat-card .label {
+    font-size: 13px;
+    color: #888;
+}
+
+.chart-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.chart-box {
+    background: #fafbfc;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 16px;
+    min-height: 200px;
+}
+
+.chart-box h3 {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.chart-box.full-width {
+    grid-column: 1 / -1;
+}
+
+.mermaid {
+    text-align: center;
+    overflow-x: auto;
+}
+
+.conclusion-box {
+    background: #f7faf9;
+    border: 1px solid #e0e8e6;
+    border-radius: 6px;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.conclusion-box h4 {
+    color: #00beac;
+    margin: 12px 0 6px;
+    font-size: 15px;
+}
+
+.conclusion-box ul {
+    padding-left: 20px;
+}
+
+.conclusion-box li {
+    margin-bottom: 4px;
+}
+
+.footer {
+    text-align: center;
+    padding: 24px;
+    color: #999;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .chart-row {
+        grid-template-columns: 1fr;
+    }
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .header h1 {
+        font-size: 20px;
+    }
+}
